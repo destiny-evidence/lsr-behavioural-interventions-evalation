@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# DVC
+.dvc/config.local
+.dvc/tmp/
+.dvc/cache
+
+data/
+
+fnox.local.toml

@@ -1,0 +1,10 @@
+_commit: af8cd18
+_src_path: gh:mcc-apsis/ecs-repo-template
+dvc_ts01_remote_path: /data/rd5/ecs/DVC/living-review-interventions
+dvc_ts01_user: ''
+project_description: Evaluating the use of AI to automate a living systematic review
+    on behavioural interventions targeting household energy use
+projectname: living-review-interventions
+python_version: '3.13'
+use_dvc: true
+use_vscode: true

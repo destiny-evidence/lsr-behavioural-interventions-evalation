@@ -1,0 +1,9 @@
+[core]
+    no_scm = True
+    analytics = false
+    remote = azure
+['remote "ts01"']
+    url = ssh://ts01.pik-potsdam.de/data/rd5/ecs/DVC/living-review-interventions
+['remote "azure"']
+    url = azure://datasets/lsr-behavioural-interventions
+    account_name = destinyevaldata
