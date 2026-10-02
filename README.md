@@ -12,7 +12,7 @@ uv add -e .
 ## [OPTIONAL] Secrets management
 
 We use [fnox](https://fnox.jdx.dev/) to share encrypted secrets in git. 
-Access is shared by adding public keys to `fnox.toml`, and re-encrypting secrets
+Access is shared by adding public keys to `fnox.toml`, and then re-encrypting secrets (which can only be done by someone containing a key the secrets were encrypted with).
 
 Install fnox
 ```sh
