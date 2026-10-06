@@ -6,7 +6,8 @@ key_file = "~/.ssh/id_ed25519"
 recipients = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJGE0QUW2CqfwANxZCCcXNGPM2RoMmwOqtXobEOl1vfm", # Max
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINmDNdk9RSsjCqR11cdsA6lWSHdlb2ZnCbF78XyZrfvh", # Tim (from github)
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID6QaWxEU9x9zSt7TRoPIlmCILKA2LHkVtlmEXvJpK/5" # Tim (from github)
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID6QaWxEU9x9zSt7TRoPIlmCILKA2LHkVtlmEXvJpK/5", # Tim (from github)
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5i75ZLLGOGUF79AxT4cRrFJ6kQV4YVb0y0EB5jeLYJ"  # Lennart
 ]
 
 [profiles]
