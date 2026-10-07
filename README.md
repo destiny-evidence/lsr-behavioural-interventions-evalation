@@ -6,7 +6,6 @@ Install dependencies and set up the development environment
 
 ```
 uv sync
-uv add -e .
 ```
 
 ## [OPTIONAL] Secrets management
