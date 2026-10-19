@@ -6,7 +6,8 @@ __pycache__/
 build/
 dist/
 .venv/
-venv/
+CLAUDE.md
+.claude/settings.local.json
 
 # DVC
 .dvc/config.local
