@@ -21,7 +21,8 @@ dynamic = [
   "version",
 ]
 dependencies = [
-  "dspy>=3.4.1",
+  "data-extraction-evaluation-toolkit",
+  "dspy>=3.2.1,<3.3.0",
   "dvc[azure,ssh]>=3.67.1",
   "openpyxl>=3.1.5",
   "pandas>=3.0.6",
@@ -45,3 +46,6 @@ lint.select = [
 
 [tool.ty]
 environment.python-version = "3.13"
+
+[tool.uv.sources]
+data-extraction-evaluation-toolkit = { path = "../data-extraction-evaluation-toolkit", editable = true }
