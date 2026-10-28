@@ -5,6 +5,7 @@ __pycache__/
 .eggs/
 build/
 dist/
+data/resources/
 .venv/
 CLAUDE.md
 .claude/settings.local.json
