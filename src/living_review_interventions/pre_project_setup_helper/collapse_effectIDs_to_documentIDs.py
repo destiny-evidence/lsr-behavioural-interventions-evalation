@@ -21,13 +21,27 @@ def first_surname(a):
     return re.sub(r"[^a-z]", "", a.split(";")[0].split(",")[0].lower())
 
 
+def pick_abstract(group, year):
+    """Return (abstract, rule). Empty abstracts are ignored; conflicts go to the year-matched record."""
+    filled = [g["abstract"] for g in group if g["abstract"]]
+    if not filled:
+        return "", "none"
+    if len(set(filled)) == 1:
+        return filled[0], "agreed" if len(filled) == len(group) else "filled-over-empty"
+    same_year = [g["abstract"] for g in group if g["abstract"] and g["year"] == year]
+    pool = same_year or filled
+    rule = "year-matched" if same_year else "fallback"
+    return max(Counter(pool).items(), key=lambda kv: (kv[1], len(kv[0])))[0], rule
+
+
 rows = list(csv.DictReader(open(SRC, encoding="utf-8", newline="")))
 recs = [
     dict(
         name=re.sub(r"\s+", " ", r["name"].replace("\r", " ").replace("\n", " ")).strip(),
         authorship=re.sub(r"\s+", " ", r["authorship"].replace("\r", " ").replace("\n", " ")).strip(),
         year=r["publication_year"].strip(),
-        source_id=r["document_id"],
+        abstract=re.sub(r"\s+", " ", r["abstract"].replace("\r", " ").replace("\n", " ")).strip(),
+        source_id=r["effect_originalRow"],
         effect_id=r["effectID"],
         dtype=r["documentType"].strip(),
         nt=norm_title(r["name"]),
@@ -74,17 +88,21 @@ for idx in range(len(recs)):
 
 out_rows = []
 out_members = []
+abstract_rules = Counter()
 for members in clusters.values():
     group = [recs[i] for i in members]
     name = max(Counter(g["name"] for g in group).items(), key=lambda kv: (kv[1], len(kv[0])))[0]
     authorship = Counter(g["authorship"] for g in group).most_common(1)[0][0]
     year = Counter(g["year"] for g in group).most_common(1)[0][0]
+    abstract, rule = pick_abstract(group, year)
+    abstract_rules[rule] += 1
     out_members.append(members)
     out_rows.append(
         dict(
             name=name,
             authorship=authorship,
             publication_year=year,
+            abstract=abstract,
             n_records=len(group),
             other_years=";".join(sorted({g["year"] for g in group} - {year})),
             other_titles=" | ".join(sorted({g["name"] for g in group} - {name})),
@@ -105,7 +123,7 @@ for n, i in enumerate(order, start=1):
     ]
 out_rows = [out_rows[i] for i in order]
 
-fields = ["document_id", "name", "authorship", "publication_year", "n_records", "other_years", "other_titles", "other_authorship"]
+fields = ["document_id", "name", "authorship", "publication_year", "abstract", "n_records", "other_years", "other_titles", "other_authorship"]
 with open(DST, "w", encoding="utf-8", newline="") as f:
     w = csv.DictWriter(f, fieldnames=fields)
     w.writeheader()
@@ -117,6 +135,7 @@ with open(LINK, "w", encoding="utf-8", newline="") as f:
     w.writerows(sorted(links, key=lambda r: (r["document_id"], int(r["effect_originalRow"]))))
 
 print("records", len(recs), "unique studies", len(out_rows))
+print("abstract selection:", dict(abstract_rules))
 print("merged title pairs (similarity >= %.2f):" % THRESHOLD)
 for a, b, s in title_pairs:
     print("  %.3f  %s  <->  %s" % (s, a[:70], b[:70]))

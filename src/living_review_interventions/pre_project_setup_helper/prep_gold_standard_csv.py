@@ -119,7 +119,7 @@ df_stripped.insert(idx + 1, "AdditionalInterventionNotes", ai.where(has_note))
 df_stripped["Notes_interventionType"] = df_stripped["Notes_interventionType"].replace(["0", 0], np.nan)
 df_stripped["multicoded"] = df_stripped["multicoded"].replace([1, "1"], "single")
 df_stripped["dateCodingCompleted"] = df_stripped["dateCodingCompleted"].map(to_iso_date)
-# df_stripped.insert(loc=0, column="document_id", value=list(range(1, 1+len(df_stripped))))
+df_stripped.insert(loc=0, column="effect_originalRow", value=list(range(1, 1+len(df_stripped))))
 # df.insert(loc=0, column="document_id", value=[math.prod(v.split('-')) for v in df['effectID']])
 
 

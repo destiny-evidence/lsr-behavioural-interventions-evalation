@@ -12,8 +12,13 @@ with MODIFIED.open(encoding="utf-8", newline="") as f:
     header = next(reader)
     rows = list(reader)
 
-id_col = header.index("document_id")
-header[id_col] = "effect_originalRow"
+# abstracts live in unique_studies.csv only
+if "abstract" in header:
+    keep = [i for i, col in enumerate(header) if col != "abstract"]
+    header = [header[i] for i in keep]
+    rows = [[row[i] for i in keep] for row in rows]
+
+id_col = header.index("effect_originalRow")
 rows_by_source_id = {}
 for row in rows:
     rows_by_source_id.setdefault(row[id_col], []).append(row)

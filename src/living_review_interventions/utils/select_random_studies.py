@@ -12,7 +12,7 @@ OUTPUT = (
     / "src"
     / "living_review_interventions"
     / "data-extraction-experiments"
-    / "selection_exp1.csv"
+    / "selected_studies.csv"
 )
 N_SELECT = 10
 
