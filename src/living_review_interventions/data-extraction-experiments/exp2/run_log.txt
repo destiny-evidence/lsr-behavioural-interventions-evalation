@@ -1,0 +1,72 @@
+--- Predicting study external_ID 50 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (66,454 characters).
+Running extraction pipeline...
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Mizobuchi, K; Takeuchi, K (2012)\study_20261102_135301_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 35 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (30,323 characters).
+Running extraction pipeline...
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Sipe, C (2009)\study_20261102_135526_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 49 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (73,293 characters).
+Running extraction pipeline...
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Loock, CM; Landwehr, JR; Staake, T; Fleisch, E; (2012)\study_20261102_135735_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 81 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (48,054 characters).
+Running extraction pipeline...
+Dropped duplicate effect 3: ('875', ('participation in test-bed project',), 'coefficient', '11.10')
+Dropped duplicate effect 4: ('875', ('participation in test-bed project',), 'coefficient', '11.10')
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Kim, ST; Lim, BI; Park, WK; Kim, MK; Son, SY (2016)\study_20261102_135840_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 124 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (72,329 characters).
+Running extraction pipeline...
+Dropped duplicate effect 2: ('10', ('experimental group',), 'difference_of_means', 'nr')
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Casals, M; Gangolells, M; Macarulla, M; Forcada, N; Fuertes, A; Jones, RV (2020)\study_20261102_135920_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 125 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (45,634 characters).
+Running extraction pipeline...
+Dropped duplicate effect 10: ('5', ('treat group 2',), 'coefficient', '0.033')
+Dropped duplicate effect 12: ('5', ('treat group 2',), 'coefficient', '0.047')
+Dropped duplicate effect 14: ('5', ('treat group 2',), 'coefficient', '0.069')
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Crago, Spraggon, Hunter, 2020\study_20261102_140132_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 163 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (86,865 characters).
+Running extraction pipeline...
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Ayertey, Winfred; Sharifi, Ayyoob; Yoshida, Yuichiro\study_20261102_140327_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 155 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (89,669 characters).
+Running extraction pipeline...
+Dropped duplicate effect 7: ('7', ('boost & ambitious goal (t1)',), 'coefficient', '56.10')
+Dropped duplicate effect 8: ('7', ('boost & modest goal (t2)',), 'coefficient', '71.63')
+Dropped duplicate effect 9: ('7', ('boost only (t3)',), 'coefficient', '43.22')
+Dropped duplicate effect 19: ('14', ('boost & ambitious goal (t1)',), 'coefficient', '81.12')
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Lazaric & Toumi, 2022\study_20261102_141005_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 83 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (1,487 characters).
+Running extraction pipeline...
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Lynham, J; Nitta, K; Saijo, T; Tarui, N (2016)\study_20261102_141008_gpt-5.6-luna.xlsx
+--- Predicting study external_ID 41 ---
+model: azure/gpt-5.6-luna api_base: https://destiny-foundry.services.ai.azure.com
+Loading context from 1 file(s)...
+Context loaded (103,656 characters).
+Running extraction pipeline...
+Dropped duplicate effect 10: ('834', ('rtp treatment group',), 'coefficient', '10.6')
+Dropped duplicate effect 15: ('834', ('rtp treatment group',), 'coefficient', '17.8')
+XLSX workbook saved to C:\Users\Lennart\PycharmProjects\lsr-behavioural-interventions-evalation\src\living_review_interventions\data-extraction-experiments\exp2\Allcott, H 2011\study_20261102_142027_gpt-5.6-luna.xlsx
